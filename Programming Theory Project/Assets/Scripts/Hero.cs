@@ -10,7 +10,7 @@ public class Hero : MonoBehaviour
     public string Hero_Name 
     { get { return Hero_Name; }
         private set {Hero_Name = value; }
-          
+        
     }
 
     //Abstraction

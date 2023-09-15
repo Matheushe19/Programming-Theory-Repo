@@ -4,5 +4,8 @@ using UnityEngine;
 
 public class Knight : Hero
 {
- 
+   public override void Skill()
+   {
+
+   }
 }
