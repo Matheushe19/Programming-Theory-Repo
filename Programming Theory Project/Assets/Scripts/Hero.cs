@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -16,11 +17,12 @@ public class Hero : MonoBehaviour
     //Abstraction
     public virtual void Skill()
     {
-        if (Input.GetMouseButtonDown(0))
-        { 
-            
-        }
-
-            
+    
+        Debug.Log("Cliked Worked");
     }
+    public void OnMouseDown()
+    {
+        Skill();
+    }
+        
 }

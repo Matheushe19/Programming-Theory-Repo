@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class Archer : Hero
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+//Polymorphism 
+ public override void Skill()
+ {
+    Debug.Log("Skill is overrided");
+ }
 }
