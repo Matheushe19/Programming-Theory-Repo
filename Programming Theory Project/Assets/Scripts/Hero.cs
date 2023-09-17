@@ -7,22 +7,27 @@ using UnityEngine;
 //inheritance
 public class Hero : MonoBehaviour
 {
-    //polymorphism
-    public string Hero_Name 
-    { get { return Hero_Name; }
-        private set {Hero_Name = value; }
-          
+     [SerializeField] private Canvas textCanvas;
+     public float desactiveCanvasTime {get; private set;}
+   
+   
+    public void OnMouseDown()//ABSTRACTION
+    {
+        textCanvas.gameObject.SetActive(true);
+        Skill();
+        StartCoroutine(DesactiveCanvas());
     }
 
-    //Abstraction
     public virtual void Skill()
     {
     
         Debug.Log("Cliked Worked");
-    }
-    public void OnMouseDown()
+    } 
+
+    IEnumerator DesactiveCanvas()
     {
-        Skill();
-    }
+        yield return new WaitForSeconds(desactiveCanvasTime);
+        textCanvas.gameObject.SetActive(false);
         
+    }
 }
